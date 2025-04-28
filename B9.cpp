@@ -1,8 +1,4 @@
-// Problem Statement:
-// Convert a given binary tree into a threaded binary tree.
-// A threaded binary tree is a binary tree where empty left/right pointers
-// are replaced with threads that point to inorder predecessor/successor.
-// This allows for efficient inorder traversal without using recursion or stack.
+
 
 #include <iostream>
 #include <cstdlib>
@@ -219,31 +215,3 @@ int main() {
     return 0;
 }
 
-// Sample Input Sequence:
-
-// 1. Insert Nodes (Option 1)
-//    1
-//    Enter data: 50
-//    1
-//    Enter data: 30
-//    1
-//    Enter data: 70
-//    1
-//    Enter data: 20
-//    1
-//    Enter data: 40
-//    1
-//    Enter data: 60
-//    1
-//    Enter data: 80
-
-// 2. Display All Nodes (Option 2)
-//    2
-//    (Output will show: 20 30 40 50 60 70 80)
-
-// 3. Display Threaded Nodes (Option 3)
-//    3
-//    (Output will show threaded nodes)
-
-// 4. Exit Program (Option 4)
-//    4
