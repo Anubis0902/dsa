@@ -1,6 +1,4 @@
-// A1 Consider telephone book database of N clients. Make use of a hash table implementation
-// to quickly look up client's telephone number. Make use of two collision handling techniques
-// and compare them using number of comparisons required to find a set of telephone numbers
+
 
 #include <iostream>
 using namespace std;
@@ -196,52 +194,3 @@ int main() {
     return 0;
 }
 
-// 1
-// Enter name :: John
-// Enter Telephone number :: 1234567890
-
-// 1
-// Enter name :: Alice
-// Enter Telephone number :: 9876543210
-
-// 1
-// Enter name :: Bob
-// Enter Telephone number :: 5555555555
-
-// 2
-// Name            Telephone
-// John            1234567890
-// Alice           9876543210
-// Bob             5555555555
-
-// 3
-// Enter the name :: Alice
-// Record found
-// Name :: Alice
-// Telephone :: 9876543210
-
-// 4
-// Enter the name :: Bob
-// Enter the new telephone number :: 6666666666
-// Record Updated successfully
-
-// 2
-// Name            Telephone
-// John            1234567890
-// Alice           9876543210
-// Bob             6666666666
-
-// 5
-// Enter name to Delete :: John
-// Record Deleted successfully
-
-// 2
-// Name            Telephone
-// Alice           9876543210
-// Bob             6666666666
-
-// 3
-// Enter the name :: John
-// Record not found
-
-// 6
