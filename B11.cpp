@@ -1,23 +1,14 @@
-// Problem Statement:
-// A Dictionary stores keywords and its meanings. Provide facility for:
-// 1. Adding new keywords
-// 2. Deleting keywords
-// 3. Updating values of any entry
-// 4. Displaying whole data sorted in ascending/descending order
-// 5. Finding maximum comparisons required for finding any keyword
-// Implementation using Binary Search Tree
 
 #include <iostream>
 #include <string>
 using namespace std;
 
-// Node class to store word and its meaning
 class DictionaryNode {
 private:
-    string word;        // The keyword
-    string meaning;     // The meaning of the keyword
-    DictionaryNode *left;   // Pointer to left child
-    DictionaryNode *right;  // Pointer to right child
+    string word;        
+    string meaning;     
+    DictionaryNode *left;   
+    DictionaryNode *right;  
 
 public:
     // Constructor
@@ -28,14 +19,14 @@ public:
         right = NULL;
     }
 
-    // Friend class to allow Dictionary access to private members
+    
     friend class Dictionary;
 };
 
 class Dictionary {
 private:
-    DictionaryNode *root;  // Root of the binary search tree
-    int maxComparisons;    // To track maximum comparisons needed
+    DictionaryNode *root;  
+    int maxComparisons;    
 
     // Helper function to create a new node
     DictionaryNode* createNode(string word, string meaning) {
@@ -365,49 +356,3 @@ int main() {
     return 0;
 }
 
-// Sample Input Sequence:
-
-// 1. Add Words (Option 2)
-//    2
-//    Enter new Word: apple
-//    Enter meaning: A round fruit with red or green skin
-
-// 2. Add More Words
-//    2
-//    Enter new Word: banana
-//    Enter meaning: A long curved fruit with yellow skin
-
-// 3. Add Another Word
-//    2
-//    Enter new Word: cherry
-//    Enter meaning: A small round red fruit
-
-// 4. View Words in Ascending Order (Option 1, then 1)
-//    1
-//    1
-//    (Output will show: apple, banana, cherry)
-
-// 5. View Words in Descending Order (Option 1, then 2)
-//    1
-//    2
-//    (Output will show: cherry, banana, apple)
-
-// 6. Search for a Word (Option 3)
-//    3
-//    Enter key to search: banana
-//    (Output will show: banana = A long curved fruit with yellow skin)
-//    (And: 1 entries found!)
-
-// 7. Update a Word (Option 4)
-//    4
-//    Enter key to update: apple
-//    (Shows current meaning)
-//    Enter new meaning: A common fruit that grows on trees
-
-// 8. View Updated Dictionary (Option 1, then 1)
-//    1
-//    1
-//    (Output will show updated meanings)
-
-// 9. Exit Program (Option 5)
-//    5
